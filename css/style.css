@@ -1,0 +1,169 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	max-width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+nav ul {
+	margin: 3rem auto 2rem;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item a {
+	color: #404040;
+	text-decoration: none;
+	position: relative;
+}
+
+.nav-item a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.nav-item a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav-item a:hover {
+	color: #000;
+}
+
+#logo {
+	max-width: 200px;
+}
+
+.hero {
+	margin: 0 auto;
+}
+
+#hero-img {
+	width: 100%;
+}
+
+.hero-box {
+	position: absolute;
+	max-width: 350px;
+	width: 40%;
+	background: #81CAD8;
+	padding: 1rem;
+	left: 80px;
+	bottom: -100px;
+}
+
+.hero-title h1 {
+	font-size: 2.8rem;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	color: #DFF7FB;
+}
+
+.hero-tag {
+	text-align: right;
+}
+
+.hero-tag span {
+	display: block;
+	margin: 1rem;
+}
+
+.hero-tag a {
+	color: #0D6070;
+	text-decoration: none;
+}
+
+.hero-tag a:hover {
+	color: #024B59;
+	text-decoration: underline;
+}
+
+main {
+	margin: 12% auto 5%;
+	max-width: 75%;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.fas {
+	font-size: 2.5em;
+	margin-bottom: 5%;
+}
+
+.fa-icon {
+	text-align: center;
+}
+
+.container h2 {
+	text-indent: 10px;
+	margin-top: 5%;
+}
+
+.jumbotron {
+	margin-top: 5%;
+}
+
+.jumbotron h1 {
+	margin-bottom: 2%;
+}
+
+.demo-button {
+	text-align: right;
+	margin: 3% 3% 0 0;
+}
+
+#demo-button {
+	padding: 15px 10px;
+	border: 2px solid #000;
+	border-radius: 10px;
+	background: #B0E5EE;
+	color: #0D6070;
+}
+
+#demo-button:hover {
+	text-decoration: none;
+	background: #81CAD8;
+	color: #024B59;
+}
+
+#demo-button:active {
+	background: #57ABBB;
+	color: #013842;
+}
+
+footer {
+	width: 100%;
+	height: 80px;
+	background: #f8f8f8;
+	line-height: 80px;
+	font-size: .9rem;
+	padding: 0 2%;
+}
