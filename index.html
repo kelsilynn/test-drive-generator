@@ -13,10 +13,11 @@
 
 <header>
 	<nav>
-		<ul>
+		<div class="menu-toggle"><i class="fas fa-bars"></i></div>
+		<ul class="site-nav">
 			<li class="nav-item"><a href="#">Home</a></li>
 			<li class="nav-item"><a href="#">Demo</li>
-			<li><img src="images/testdrivegenerator.png" id="logo"></li>
+			<li class="nav-logo"><img src="images/testdrivegenerator.png" id="logo"></li>
 			<li class="nav-item"><a href="#">Examples</a></li>
 			<li class="nav-item"><a href="#">Contact</a></li>
 		</ul>
@@ -69,7 +70,23 @@
 </footer>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".menu-toggle").click(function() {
+
+		if($(".nav-item").css("display") == "none"){
+
+			$(".nav-item").slideDown("fast");
+
+		} else {
+
+			$(".nav-item").slideUp("fast");
+
+		}
+
+			
+
+	});
+</script>
 </body>
 </html>

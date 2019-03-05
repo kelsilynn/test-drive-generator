@@ -12,7 +12,16 @@ h1, h2, h3 {
 header {
 	max-width: 80%;
 	margin: 0 auto;
-	position: relative;
+}
+
+.menu-toggle {
+	float: right;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+.fa-bars {
+	font-size: 1.5em;
 }
 
 nav ul {
@@ -20,9 +29,27 @@ nav ul {
 	padding: 0;
 	list-style-type: none;
 	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-end;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item {
+	padding: 15px 0;
+}
+
+.nav-logo {
+	order: 1;
+}
+
+.nav-item {
+	order: 2;
+	display: none;
+}
+
+.nav-item-open {
+	display: initial;
 }
 
 .nav-item a {
@@ -69,13 +96,11 @@ nav ul {
 }
 
 .hero-box {
-	position: absolute;
 	max-width: 350px;
 	width: 40%;
 	background: #81CAD8;
 	padding: 1rem;
-	left: 80px;
-	bottom: -100px;
+	transform: translate(25%, -50%);
 }
 
 .hero-title h1 {
@@ -105,7 +130,7 @@ nav ul {
 }
 
 main {
-	margin: 12% auto 5%;
+	margin: 0 auto 5%;
 	max-width: 75%;
 }
 
@@ -113,7 +138,7 @@ main {
 	margin: 0 auto;
 }
 
-.fas {
+main .fas {
 	font-size: 2.5em;
 	margin-bottom: 5%;
 }
@@ -166,4 +191,43 @@ footer {
 	line-height: 80px;
 	font-size: .9rem;
 	padding: 0 2%;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-box {
+		max-width: 300px;
+		width: 80%;
+		padding: 1rem;
+		transform: translate(10%, -20%);
+	}
+
+	.hero-title h1 {
+		font-size: 2rem;
+		margin-bottom: .5rem;
+	}
+
+	.hero-tag {
+		font-size: .9em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+
+	nav ul {
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: flex-end;
+	}
+
+	.nav-item {
+		display: initial;
+	}
+
+	.nav-logo,
+	.nav-item {
+		order: initial;
+	}
 }
